@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Assignment 1</string>
+    <string name="app_name">Assignment 2</string>
     <string name="hello_message">Namaste Duniya!</string>
-    <string name="ButtonText">I\’m a button</string>
+    <string name="ButtonText">Mai button hu!</string>
+    <string name="Login">Login</string>
+    <string name="Password">Password</string>
 </resources>
