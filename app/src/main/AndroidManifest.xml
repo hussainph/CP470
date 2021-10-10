@@ -3,19 +3,18 @@
     package="com.phal1880.androidassignments">
 
     <uses-feature
-        android:name = "android.hardware.camera2"
-        android:required = "true"
-        />
+        android:name="android.hardware.camera2"
+        android:required="true" />
+
     <uses-permission
         android:name="android.permission.CAMERA"
-        android:requiredFeature="true"
-        />
+        android:requiredFeature="true" />
 
     <queries>
-    <intent>
-        <action android:name="android.intent.action.MAIN" />
-    </intent>
-        </queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
 
     <application
         android:allowBackup="true"
@@ -24,9 +23,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidAssignments">
-        <activity android:name=".ListItemsActivity">
 
-        </activity>
+        <meta-data
+            android:name ="android.support.PARENT_ACTIVITY"
+            android:value=".LoginActivity"
+            />
+        <activity android:name=".ChatWindow"
+            android:parentActivityName=".MainActivity"> </activity>
+        <activity android:name=".ListItemsActivity"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,9 +39,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity"
+            android:parentActivityName=".LoginActivity"></activity>
     </application>
 
 </manifest>
