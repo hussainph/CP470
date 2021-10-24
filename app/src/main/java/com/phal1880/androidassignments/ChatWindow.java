@@ -66,7 +66,7 @@ public class ChatWindow extends AppCompatActivity {
                 result = inflater.inflate(R.layout.chat_row_ongoing, null);
             }
 
-            TextView message = (TextView)result.findViewById(R.id.message_text);
+            TextView message = (TextView) result.findViewById(R.id.message_text);
             message.setText(getItem(position));
             return result;
         }

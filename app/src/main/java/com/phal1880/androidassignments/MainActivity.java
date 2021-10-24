@@ -25,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         final Button listViewCaller = findViewById(R.id.listActivityButton);
         final Button startChat = findViewById(R.id.start_chat);
 
+        final Button startToolbarTest = findViewById(R.id.start_tool_test);
+
         listViewCaller.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListItemsActivity.class);
@@ -36,6 +38,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ChatWindow.class);
+                startActivity(intent);
+            }
+        });
+
+        startToolbarTest.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, TestToolbar.class);
                 startActivity(intent);
             }
         });
