@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         final Button startChat = findViewById(R.id.start_chat);
 
         final Button startToolbarTest = findViewById(R.id.start_tool_test);
+        final Button openWeather = findViewById(R.id.weather);
 
         listViewCaller.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -45,6 +46,13 @@ public class MainActivity extends AppCompatActivity {
         startToolbarTest.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TestToolbar.class);
+                startActivity(intent);
+            }
+        });
+
+        openWeather.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, WeatherForecast.class);
                 startActivity(intent);
             }
         });
@@ -91,6 +99,18 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, messagePassed, duration);
             toast.show();
         }
+
+    }
+
+    @Override
+
+    public void onBackPressed() {
+
+        super.onBackPressed();
+
+        setResult(Activity.RESULT_CANCELED);
+
+        finish();
 
     }
 }

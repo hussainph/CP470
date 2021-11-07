@@ -150,4 +150,16 @@ public class ListItemsActivity extends AppCompatActivity {
             Log.i(ACTIVITY_NAME, "Returned to ListItemsActivity.onActivityResult");
         }
     }
+
+    @Override
+
+    public void onBackPressed() {
+
+        super.onBackPressed();
+
+        setResult(Activity.RESULT_CANCELED);
+
+        finish();
+
+    }
 }

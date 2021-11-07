@@ -17,6 +17,7 @@
     <string name="about">About</string>
     <string name="go_back">Do you want to go back?</string>
     <string name="item_select">You selected Item 1.</string>
+    <string name="weather">Weather Forecast</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

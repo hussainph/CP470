@@ -2,6 +2,7 @@ package com.phal1880.androidassignments;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -72,5 +73,16 @@ public class LoginActivity extends AppCompatActivity {
         edit.commit();
         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
+    }
+    @Override
+
+    public void onBackPressed() {
+
+        super.onBackPressed();
+
+        setResult(Activity.RESULT_CANCELED);
+
+        finish();
+
     }
 }
